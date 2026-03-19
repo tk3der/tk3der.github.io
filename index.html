@@ -19,14 +19,116 @@
     </style>
 </head>
 <body>
-嬉しかったこと・楽しかったこと
-    チーム横断で様々の方と関わることができ、幅広に知識を身につけられた。
-    AIの活用によって業務を効率化することができた
-    
-苦しかったこと・つらかったこと
-    複数のタスクを同時並行で行うためのタスク管理に難しさを感じた。
-    必要な業務知識が多く、把握しきれない。
-    チーム作業において、適切な頻度、粒度でコミュニケーションを取ることの難しさを感じた。
-    業務外での自己研鑽の時間を習慣的に確保することに苦戦した
+プロジェクトフォルダ：D:\Data\Udemy\git-sample-udemy
+
+２回目以降のpush
+
+ソース管理で差分が確認できる
+変更を破棄を押すと戻すことができる
+
+git add .
+
+ステージされている変更
+ステージング：コミット対象になっているファイル
+
+git commit -m "2nd push"
+
+git内での保存完了
+GitGlaphで確認できる
+
+git push origin main
+
+githubに反映
+
+
+補足
+git push -u
+-uは--set-upstreamと同じ
+push先（上流ブランチ）をorigin/mainに規定する
+git pushのみでpushできるようになる
+
+git branch でカレントリポジトリを確認できる
+git branch -vvで設定を確認できる
+git branch -u origin/mainで設定ができる
+
+.gitignoreにGitHubにアップしたくないファイル・フォルダを記載する
+.envフォルダにパスワードなどを記載するのが慣例
+.env_exampleに雛形を記載するのが慣例
+
+ブランチ
+
+例えばサービス稼働のブランチと新機能確認やバグ確認のブランチを並行しておいて最後にマージするなど
+
+ブランチ一覧
+git branch
+ブランチ作成
+git branch ブランチ名
+ブランチ名変更
+git branch -m old new
+ブランチ切り替え
+git switch ブランチ名
+ブランチ作成＋切り替え
+git switch -c ブランチ名
+ブランチ削除
+git branch -d ブランチ名
+
+昔はcheckoutというコマンドを使っていた。
+
+VSCodeは画面左下にカレントブランチが表示される
+GUIでもブランチ切り替えができる
+
+ここまでがGit上のブランチ
+
+Githubにもブランチがある
+
+git push origin ブランチ名（Github側のブランチ名）
+
+github上で複数ブランチが確認できる
+
+注意：gitとgithubではブランチの扱いは別
+
+
+プルリクエスト
+　Githubの機能
+
+２つのブランチをマージする要求
+ブランチに差分がある時にボタンが表示される
+画面上のプルリクエストタブからも操作できる
+
+【流れ】
+コンフリクト（コードが競合していないか）のチェック
+コードのチェック
+チェック内容をコメント
+マージ
+
+操作
+Conpare&PullRequest
+base（マージ先）とconpare（比較対象）のブランチを選ぶ
+コメントを記載する。
+自動でコンフリクトがないか確認してくれる。
+Merge PullRequest
+Confirm Merge
+プルリクがクローズされる
+
+
+NewPullRequest
+マージ先とマージ対象を選ぶ
+Create PullRequest
+プルリクタブでリクエスト中のプルリクを確認できる。
+Merge PullRequest
+Confirm PullRequest（承認）
+
+GitでのMerge（ローカル側のMerge）
+マージされる側ブランチを選択した状態でgit merge マージしたいブランチ名
+ 
+コミットまでを行う
+マージされる側のブランチにSwitchする
+git merge マージしたいブランチ名
+コメント記載
+マージ後もブランチは残っている
+
+
+
+
 </body>
 </html>
